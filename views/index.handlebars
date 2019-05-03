@@ -1,0 +1,16 @@
+<h2>CREATE A BURGER</h2>
+<form id="createburger" class="button-size">
+  <textarea type="text" name="plan"></textarea>
+  <button type="submit">MAKE DA BURGER!</button>
+</form>
+
+<h2>EATING A BURGER</h2>
+<form id="eatburger" class="button-size">
+  <textarea type="text" name="plan"></textarea>
+  <ul>
+  {{#each burger}}
+    <li>{{id}}: {{burger}}<br>Devoured: {{devoured}}</li>
+  {{/each}}
+  </ul>
+  <button type="submit">EAT DA BURGER!</button>
+</form>
