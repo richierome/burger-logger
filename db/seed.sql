@@ -1,4 +1,4 @@
 INSERT INTO burger (burger, devoured)
-VALUES ( "Real Deal burger", true),
+VALUES ( "Real Deal Burger", true),
 ("Meat patty", false),
 ("Veggie patty", true);

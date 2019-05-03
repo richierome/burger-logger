@@ -32,13 +32,14 @@ var orm = {
         cd(result);
 
     });
+    
 
     },
 
-    insertOne: (table, cols, val, cb) => {
-        var queryStr ="INSERT INTO" + table;
+    insertOne: (table, cols, vals, cb) => {
+        var queryStr ="INSERT INTO " + table;
         queryStr += " (" + cols.toString() + ")";
-        queryStr += "VALUES (" + printQuestionMarks(vals.length) +");";
+        queryStr += " VALUES (" + printQuestionMarks(vals.length) +");";
 
         connection.query(queryStr, vals, (err, results) => {
             if(err) throw err;
@@ -49,7 +50,7 @@ var orm = {
 
     updateOne: (table, objColVals, condition, cb) =>{
         var queryStr = "UPDATE" + table;
-        queryStr += "SET" + ObjTOSql(objColVals);
+        queryStr += "SET" + ObjToSql(objColVals);
         queryStr += "WHERE" + condition + ";";
 
         connection.query(queryStr, (err, result) =>{

@@ -13,7 +13,7 @@ var burger = {
 insertOne: (cols, vals, cb) =>{
     orm.insertOne("burger", cols, vals, (res) => {
         cb(res);
-    })
+    });
 },
 
 updateOne: (objColVals, condition, cb) =>{

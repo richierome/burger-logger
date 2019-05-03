@@ -14,11 +14,14 @@ router.get("/", (req, res) => {
 });
 
 router.post("/api/burgers", (req, res) => {
+    console.log(req.body);
+    req.body.devoured = req.body.devoured == 'true';
+
     burger.insertOne([
-        "burger_name", "devoured"
+        "burger", "devoured"
     ], [req.body.burger_name, req.body.devoured], (data) =>{
         //send back the id of the newly created burger.
-        res.json ({id: data.inserId });
+        res.json ({id: data.insertId });
     });
 });
 
