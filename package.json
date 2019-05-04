@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/richierome/burger-logger/issues"
   },
-  "homepage": "https://github.com/richierome/burger-logger#readme"
+  "homepage": "https://github.com/richierome/burger-logger#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
